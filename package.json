@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/apmorris83/recycascan-api/issues"
   },
-  "homepage": "https://github.com/apmorris83/recycascan-api#readme"
+  "homepage": "https://github.com/apmorris83/recycascan-api#readme",
+  "dependencies": {
+    "mongoose": "^4.9.6"
+  }
 }
