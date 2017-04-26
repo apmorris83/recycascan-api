@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seed/seed.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,9 @@
   },
   "homepage": "https://github.com/apmorris83/recycascan-api#readme",
   "dependencies": {
+    "async": "^2.3.0",
+    "express": "^4.15.2",
+    "log4js": "^1.1.1",
     "mongoose": "^4.9.6"
   }
 }
