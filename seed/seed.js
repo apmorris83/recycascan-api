@@ -7,6 +7,8 @@ const RecyclingCentreDoc = require('../models/recycling-centres');
 const recyclingCentreData = require('./data/recycling-centres.js');
 const postcodeData = require('./data/postcodes.js');
 const PostcodeDoc = require('../models/postcodes');
+const packagingData = require('./data/packaging_objects.js');
+const PackagingDoc = require('../models/packaging');
 const async = require('async');
 const log4js = require('log4js');
 const logger = log4js.getLogger();
@@ -19,7 +21,8 @@ mongoose.connect('mongodb://user:password@ds055915.mlab.com:55915/recycascan', f
       addBins,
       addCollections,
       addRecyclingCentres,
-      addPostcodes
+      addPostcodes,
+      addPackaging
     ], function (err) {
       if (err) {
         logger.error('ERROR SEEDING :O');
@@ -94,6 +97,22 @@ function addPostcodes(done) {
       }
       return cb();
     });
+  }, function (error) {
+    if (error) return done(error);
+    return done(null)
+  })
+}
+
+function addPackaging(done) {
+  logger.info('adding packaging')
+  async.eachSeries(packagingData, function (package, cb) {
+    let packagingDoc = new PackagingDoc(package);
+    packagingDoc.save(function (err) {
+      if (err) {
+        return cb(err)
+      }
+      return cb();
+    })
   }, function (error) {
     if (error) return done(error);
     return done(null)

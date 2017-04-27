@@ -3,6 +3,7 @@ const router = express.Router();
 const binModel = require('../models/bins');
 const collectionModel = require('../models/collections');
 const recyclingCentreModel = require('../models/recycling-centres');
+const packagingModel = require('../models/packaging');
 const postcodeModel = require('../models/postcodes');
 
 router.route('/').get(function (request, response) {
@@ -46,6 +47,16 @@ router.route('/postcodes')
         return response.status(500).send({ error: error });
       }
       response.status(200).send({ postcode: postcode });
+    });
+  });
+
+router.route('/packaging')
+  .get(function (request, response) {
+    packagingModel.find({}, function (error, packaging) {
+      if (error) {
+        return response.status(500).send({ error: error });
+      }
+      response.status(200).send({ packaging: packaging });
     });
   });
 
