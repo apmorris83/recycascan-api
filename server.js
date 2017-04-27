@@ -1,10 +1,11 @@
+if (!process.env.NODE_ENV) process.env.NODE_ENV = 'dev';
 const express = require ('express');
 const app = express();
 const apiRouter = require('./routes/api');
 const mongoose = require('mongoose');
-var config = require('./config');
-var db = 'mongodb://user:password@ds055915.mlab.com:55915/recycascan';
-var PORT = config.PORT[process.env.NODE_ENV] || process.env.PORT;
+const config = require('./config');
+const db = config.DB[process.env.NODE_ENV];
+const PORT = config.PORT[process.env.NODE_ENV] || process.env.PORT;
 
 mongoose.Promise = global.Promise;
 mongoose.connect(db, function (err) {

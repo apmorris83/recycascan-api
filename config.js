@@ -1,6 +1,6 @@
 module.exports = {
   DB: {
-    test: 'mongodb://localhost/northcoders-news-api-test',
+    test: 'mongodb://localhost/recycascan-test',
     dev: 'mongodb://user:password@ds055915.mlab.com:55915/recycascan'
   },
   PORT: {
