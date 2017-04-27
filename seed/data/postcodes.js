@@ -16,7 +16,7 @@ module.exports = [
     { postcode: "M16", council: "trafford" },
     { postcode: "M17", council: "trafford" },
     { postcode: "M18", council: "manchester" },
-    { postcode: "M19", council: "Stockport" },
+    { postcode: "M19", council: "stockport" },
     { postcode: "M20", council: "manchester" },
     { postcode: "M21", council: "manchester" },
     { postcode: "M22", council: "manchester" },

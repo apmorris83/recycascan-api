@@ -94,7 +94,7 @@ describe('API ROUTES', () => {
                     if (error) throw error;
                     expect(response.statusCode).to.equal(200);
                     expect(response.error).to.equal(false);
-                    expect(response.bin).to.equal('brown');
+                    expect(response.body.bins[0].bin).to.equal('brown');
                     done();
                 });
         });
