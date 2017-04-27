@@ -12,12 +12,23 @@ router.route('/').get(function (request, response) {
 
 router.route('/bins')
   .get(function (request, response) {
-    binModel.find({}, function (error, bins) {
-      if (error) {
-        return response.status(500).send({ error: error });
+    if (Object.keys(request.query).length < 1) {
+      binModel.find({}, function (error, bins) {
+        if (error) {
+          return response.status(500).send({ error: error });
+        }
+        response.status(200).send({ bins: bins });
+      });
+    } else {
+      if (request.query.packaging && request.query.council) {
+        binModel.find({packaging: request.query.packaging, council: request.query.council}, function (error, bins) {
+          if (error) {
+            return response.status(500).send({ error: error });
+          }
+          response.status(200).send({ bins: bins });
+        });
       }
-      response.status(200).send({ bins: bins });
-    });
+    }
   });
 
 router.route('/collections')
