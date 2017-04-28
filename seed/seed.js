@@ -15,7 +15,6 @@ const logger = log4js.getLogger();
 
 mongoose.connect('mongodb://user:password@ds055915.mlab.com:55915/recycascan', function (err) {
   if (!err) {
-     logger.info(`connected to database ${DBs.dev}`);
     mongoose.connection.db.dropDatabase();
     async.waterfall([
       addBins,
