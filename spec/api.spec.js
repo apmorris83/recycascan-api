@@ -86,8 +86,8 @@ describe('API ROUTES', () => {
                 });
         });
     });
-    describe('GET correct bin and council data', () => {
-        it('returns correct bin and council data', (done) => {
+    describe('GET /bins?packaging=plastic&council=manchester', () => {
+        it('returns correct bin and council data fom query', (done) => {
             request(`${ROOT}`)
                 .get('/bins?packaging=plastic&council=manchester')
                 .end((error, response) => {
@@ -95,6 +95,19 @@ describe('API ROUTES', () => {
                     expect(response.statusCode).to.equal(200);
                     expect(response.error).to.equal(false);
                     expect(response.body.bins[0].bin).to.equal('brown');
+                    done();
+                });
+        });
+    });
+    describe('GET /collections?council=bolton', () => {
+        it('returns correct councils from collection query', (done) => {
+            request(`${ROOT}`)
+                .get('/collections?council=bolton')
+                .end((error, response) => {
+                    if (error) throw error;
+                    expect(response.statusCode).to.equal(200);
+                    expect(response.error).to.equal(false);
+                    expect(response.body.collections[0].council).to.equal('bolton');
                     done();
                 });
         });
