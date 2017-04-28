@@ -1,7 +1,7 @@
 module.exports = {
   DB: {
     test: 'mongodb://localhost/recycascan-test',
-    dev: 'mongodb://user:password@ds055915.mlab.com:55915/recycascan'
+    dev: 'mongodb://localhost/recycascan-test'
   },
   PORT: {
     test: 3090,

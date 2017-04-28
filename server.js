@@ -4,8 +4,8 @@ const app = express();
 const apiRouter = require('./routes/api');
 const mongoose = require('mongoose');
 const config = require('./config');
-const db = config.DB[process.env.NODE_ENV] || process.env.PORT.DB;
-const PORT = config.PORT[process.env.NODE_ENV] || process.env.PORT;
+const db = process.env.DB || config.DB[process.env.NODE_ENV];
+const PORT = process.env.PORT || config.PORT[process.env.NODE_ENV];
 
 mongoose.Promise = global.Promise;
 mongoose.connect(db, function (err) {
