@@ -33,12 +33,23 @@ router.route('/bins')
 
 router.route('/collections')
   .get(function (request, response) {
-    collectionModel.find({}, function (error, collections) {
-      if (error) {
-        return response.status(500).send({ error: error });
+    if (Object.keys(request.query).length < 1) {
+      collectionModel.find({}, function (error, collections) {
+        if (error) {
+          return response.status(500).send({ error: error });
+        }
+        response.status(200).send({ collections: collections });
+      });
+    } else {
+      if (request.query.council) {
+        collectionModel.find({council: request.query.council}, function (error, collections) {
+          if (error) {
+            return response.status(500).send({ error: error });
+          }
+          response.status(200).send({ collections: collections });
+        });
       }
-      response.status(200).send({ collections: collections });
-    });
+    }
   });
 
 router.route('/recyclingcentres')
