@@ -48,17 +48,23 @@ const recyclingCentre = [
     new models.RecyclingCentres({
         name: 'Longley Lane Recycling Centre',
         address: 'Longley Lane Recycling Centre, Longley Lane, Sharston, M22 4RQ',
-        postcode: 'M22 4RQ'
+        postcode: 'M22 4RQ',
+        latitude: 53.3977763,
+        longitude: -2.248374799999965
     }),
     new models.RecyclingCentres({
         name: 'Sandfold Lane Recycling Centre',
         address: 'Sandfold Lane Recycling Centre, Sandfold Lane, Manchester, M19 3BJ',
-        postcode: 'M19 3BJ'
+        postcode: 'M19 3BJ',
+        latitude: 53.4474855,
+        longitude: -2.1762579999999616
     }),
     new models.RecyclingCentres({
         name: 'Reliance Street Recycling Centre',
         address: 'Reliance Street Recycling Centre, Reliance Street, Manchester, M40 3EZ',
-        postcode: 'M40 3EZ'
+        postcode: 'M40 3EZ',
+        latitude: 53.5055097,
+        longitude: -2.1797556000000213
     })
 ];
 
