@@ -4,7 +4,7 @@ const app = express();
 const apiRouter = require('./routes/api');
 const mongoose = require('mongoose');
 const config = require('./config');
-const db = 'mongodb://user:password@ds055915.mlab.com:55915/recycascan';
+const db = config.DB[process.env.NODE_ENV] || process.env.PORT.DB;
 const PORT = config.PORT[process.env.NODE_ENV] || process.env.PORT;
 
 mongoose.Promise = global.Promise;
