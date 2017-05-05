@@ -138,5 +138,12 @@ module.exports = [
     postcode: 'WA14 5TB',
     latitude: 53.4112842,
     longitude: -2.3733471000000463
+  },
+  {
+    name: 'Household Recycling Centre',
+    address: 'Household Recycling Centre, Prince William Ave, Deeside CH5 2QZ',
+    postcode: 'CH5 2QZ',
+    latitude: 53.1969715,
+    longitude: -2.990745199999992
   }
 ];
