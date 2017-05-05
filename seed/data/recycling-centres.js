@@ -141,9 +141,44 @@ module.exports = [
   },
   {
     name: 'Household Recycling Centre',
-    address: 'Household Recycling Centre, Prince William Ave, Deeside CH5 2QZ',
+    address: 'Household Recycling Centre, Prince William Ave, Deeside, CH5 2QZ',
     postcode: 'CH5 2QZ',
     latitude: 53.1969715,
     longitude: -2.990745199999992
+  },
+  {
+    name: 'Islington Household Recycling Centre',
+    address: 'Islington Household Recycling Centre, 40 Hornsey St, London, N7 8HU',
+    postcode: 'N7 8HU',
+    latitude: 51.5496636,
+    longitude: -0.11654220000002624
+  },
+  {
+    name: 'Dawsholm Recycling Centre',
+    address: 'Dawsholm Recycling Centre, 75 Dalsholm Rd, Glasgow, G20 0TB',
+    postcode: 'G20 0TB',
+    latitude: 55.8939039,
+    longitude: -4.310584899999981
+  },
+  {
+    name: 'Penlan Recycling Centre',
+    address: 'Penlan Recycling Centre, 268 Heol Gwyrosydd, Penlan, Swansea, SA5 7BS',
+    postcode: 'SA5 7BS',
+    latitude: 51.64827529999999,
+    longitude: -3.9630171999999675
+  },
+  {
+    name: 'Chelson Meadow Recycling Centre',
+    address: 'Chelson Meadow Recycling Centre, The Ride, Plymouth, PL9 7JA',
+    postcode: 'PL9 7JA',
+    latitude: 50.3720493,
+    longitude: -4.1020505000000185
+  },
+  {
+    name: 'Norwich (Mile Cross) Recycling Centre',
+    address: 'Norwich (Mile Cross) Recycling Centre, Swanton Road, Norwich, NR2 4LH',
+    postcode: 'NR2 4LH',
+    latitude: 52.6423777,
+    longitude: 1.2728551000000152
   }
 ];
