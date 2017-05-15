@@ -19,7 +19,8 @@ Install dependencies
 ```
 npm install or yarn install
 ```
-In a separate terminal window, run the mongod command. This is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations. 
+## Running the tests
+To run the automated tests use the mongod command in a separate terminal window, run the mongod command. This is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations.
 ```
 mongod
 ```
@@ -28,12 +29,13 @@ Back in the recycascan-api terminal window, use npm test to run the tests
 npm test
 ```
 ## Built With
-* [React Native](https://facebook.github.io/react-native/) - Build native mobile apps using JavaScript and React
-* [react-native-camera](https://github.com/lwansbrough/react-native-camera) - A Camera component for React Native
-* [react-native-maps](https://github.com/airbnb/react-native-maps) - React Native Mapview component for iOS + Android
-* [react-native-form-generator](https://github.com/MichaelCereda/react-native-form-generator) - Generate forms with native look and feel
-* [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
 * [MongoDB](https://www.mongodb.com/) - document database
+* [Express](https://expressjs.com/) - Create a robust API is quick and easy
+* [Mongoose](http://mongoosejs.com/) - Elegant MongoDB object modeling for node.js
+* [mLab](https://mlab.com/home) - MongoDB deployments
+* [Heroku](https://www.heroku.com/) - Platform for building with modern architectures
+* [Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
+
 ## Author
 * **Andrew Morris** - [apmorris83](https://github.com/apmorris83)
-See also the list of [contributors](https://github.com/apmorris83/recycascan/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/apmorris83/recycascan-api/graphs/contributors) who participated in this project.
