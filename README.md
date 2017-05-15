@@ -20,7 +20,7 @@ Install dependencies
 npm install or yarn install
 ```
 ## Running the tests
-To run the automated tests use the mongod command in a separate terminal window, run the mongod command. This is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations.
+To run the automated tests use the mongod command in a separate terminal window. This is the primary daemon process for the MongoDB system. It handles data requests, manages data access, and performs background management operations.
 ```
 mongod
 ```
